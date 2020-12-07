@@ -74,9 +74,11 @@ function updateScore(){
 
 function win(){
 
+    //cards.forEach(card => card.classList.add('won'));
+
     setTimeout(() => {
         openOverlay();
-    },1500);
+    },4000);
 
 }
 
@@ -88,7 +90,7 @@ function openOverlay(){
 document.addEventListener('keydown', (e) => {
     if (e.code === "KeyT") {
         
-        openOverlay();
+        win();
     }
   });
 
@@ -106,6 +108,7 @@ function disableCards(){
 }
 
 function restartGame(){
+    //cards.forEach(card => card.classList.remove('won'));
     cards.forEach(card => card.addEventListener('click',flipCard));
     cards.forEach(card => card.classList.remove('flip'));
     cards.forEach(card => card.classList.remove('discovered'));

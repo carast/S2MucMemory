@@ -8,7 +8,7 @@
 
 body{
     height:100vh;
-    background: #98c1d4;
+    background: #b9e0f1;
     padding: 2em;  
 }
 
@@ -44,7 +44,7 @@ button{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #eff9fd;
+  background-color: #b9e0f1;
   z-index: 2;
   text-align: center;
   justify-content: center;
@@ -141,7 +141,8 @@ h1{
 }
 
 .memory-card.won{
-    animation: pulse 2s infinite linear;
+    animation: heartBeat;
+    animation-duration: 3s; 
 
 }
 
