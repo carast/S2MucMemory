@@ -37,8 +37,6 @@ function flipCard(){
 function checkForMatch(){
     let isMatch = firstCard.dataset.number === secondCard.dataset.number;
 
-    document.getElementById("overlay").style.display = "block";
-
 
     isMatch ? cardsMatched() : unflipCards();
 
@@ -78,6 +76,8 @@ function win(){
     cards.forEach(card => {
         card.classList.add("won");
     }); 
+    document.getElementById("overlay").style.display = "block";
+
 }
 
 function disableCards(){
