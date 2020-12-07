@@ -3,7 +3,7 @@ let scoreDisplay = document.getElementById("score");
 let present = document.getElementById("present");
 const overlay = document.getElementById("overlay");
 
-let totalCards = 16;
+const totalCards = 16;
 let discoveredCards = 0;
 
 let unsuccessfulDraws = 0;
@@ -49,6 +49,8 @@ function cardsMatched(){
 
     discoveredCards = discoveredCards+2;
 
+    console.log("discovered Cards" + discoveredCards);
+
     if(discoveredCards >= totalCards){
         win();
     }
@@ -57,7 +59,6 @@ function cardsMatched(){
 function updateScore(){
     score = score + Math.round(20/(unsuccessfulDraws+1));
 
-    console.log(present);
 
     setTimeout(() => {
         scoreDisplay.innerHTML = score;
@@ -72,13 +73,23 @@ function updateScore(){
 
 
 function win(){
-    scoreDisplay.innerHTML = score + " 🥳 You won! 🥳";
-    cards.forEach(card => {
-        card.classList.add("won");
-    }); 
-    document.getElementById("overlay").style.display = "block";
+
+    openOverlay();
+    
 
 }
+
+function openOverlay(){
+    document.getElementById("score-overlay").innerHTML = score;
+    document.getElementById("overlay").style.display = "block";
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.code === "KeyT") {
+        
+        openOverlay();
+    }
+  });
 
 function disableCards(){
     firstCard.removeEventListener('click',flipCard);
@@ -96,11 +107,13 @@ function disableCards(){
 function restartGame(){
     cards.forEach(card => card.addEventListener('click',flipCard));
     cards.forEach(card => card.classList.remove('flip'));
+    cards.forEach(card => card.classList.remove('discovered'));
     shuffleCards();
     resetBoard();
     discoveredCards = 0;
     unsuccessfulDraws = 0;
     score = 0;
+    scoreDisplay.innerHTML = score;
 
     overlay.style.display = "none";
 

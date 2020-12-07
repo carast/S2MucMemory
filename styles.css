@@ -62,7 +62,7 @@ button{
     font-size: 1em;
 }
 
-.score-number{
+.score-number-overlay{
     font-size: 3em;
     font-weight:600;
     text-transform: uppercase;
