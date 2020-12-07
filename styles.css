@@ -1,0 +1,228 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:MaisonWEB,Arial,Verdana,sans-serif;
+    --animate-delay: 1s;
+}
+
+body{
+    height:100vh;
+    background: #98c1d4;
+    padding: 2em;  
+}
+
+button{
+    color: white;
+    background-color: #00440A;
+    padding: 24px;
+    padding-top: 12px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top:40px;
+}
+
+.overlay-content{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#overlay{
+    position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #eff9fd;
+  z-index: 2;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto; 
+}
+
+.present-overlay{
+    height: 10em;
+}
+
+.won-message{
+    margin-top:16px;
+    font-size: 1em;
+}
+
+.score-number{
+    font-size: 3em;
+    font-weight:600;
+    text-transform: uppercase;
+}
+
+.content{
+    justify-content: center;
+    align-items: center;
+    width: 42em;
+    margin: auto; 
+    z-index: 1;
+}
+
+h1{
+    margin-bottom: 16px;
+    font-size: 2em;
+    text-align: left;
+    width:50%;
+    position: absolute;
+    bottom: 0;
+}
+
+.scoreDisplay{
+    text-align: center;
+    font-size: 1.8em;
+    padding:16px;    
+}
+
+.memory-game{    
+    height: 42em; 
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.memory-card{
+    width:calc(25% - 10px) ;
+    height: calc(25% - 10px);
+    margin: 5px;
+    position:relative;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: transform .5s;
+    transition: transform .5s;
+}
+
+.scored{
+    animation: rubberBand;
+    animation-duration: 2s; 
+}
+
+
+.memory-card:active{
+    -webkit-transform: scale(.97);
+    transform: scale(.97);
+    transition: transfrom .2s;
+}
+
+
+.memory-card.flip{
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+
+}
+
+.memory-card.discovered .front-face{
+    background: darkred;
+    -webkit-transition: background .3s;
+    transition: background .3s;
+    -webkit-transition: background .3s;
+}
+
+.memory-card.won{
+    animation: pulse 2s infinite linear;
+
+}
+
+
+
+.front-face,
+.back-face{
+    width:100%;
+    height:100%;   
+    position: absolute;
+    border-radius: 5px;
+    background: #ffffff;
+    border: 2px solid darkred;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+
+.back-face:hover{
+    -webkit-transform: scale(.98);
+    transform: scale(.98);
+    -webkit-transition: transfrom .2s;
+    transition: transfrom .2s;
+}
+
+.front-face{
+    padding:10px;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+@keyframes turner{
+    from{  transform: rotateY(0deg)   }
+    to  {  transform: rotateY(360deg) }
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(255, 20, 147, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(255, 20, 147, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(255, 20, 147, 0);
+    }
+}
+
+
+ 
+
+@media (max-width : 50em){
+
+    body{
+        padding:16px;
+    }
+
+    .content {
+        width: 30em;
+    }
+
+    .memory-game {
+      height: 30em;
+    }
+  
+    .memory-card {
+        width:calc(25% - 4x);
+        height:calc(25% - 4x);
+        margin: 4px;
+    }
+
+    .front-face{
+        padding:4px;
+    }
+
+    .scoreDisplay{
+        padding: 4px;
+    }
+  
+    
+  }
+

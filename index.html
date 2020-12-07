@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UFT-8">
+    <title>S2 Muc Memory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="animatedModal.min.js"></script>
+</head>
+<body>
+    <div id="overlay">
+        <div class="overlay-content">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=E8gmARGvPlI"><img class="animate__animated animate__bounce animate__infinite	infinite present-overlay" src="Present.svg" alt="Present" width="69" height="85"></a>
+                <p id="score-overlay" class="score-number">0</p>
+                <p class="won-message">your score<p>
+            <button onclick="restartGame()">Play again</button>
+         </div>
+    </div>
+    <div class="content">
+        <section class="header">
+            <div class="scoreDisplay">
+                <img id="present" src="Present.svg" alt="Present" width="69" height="69"> 
+                <span id="score" class="score_number">0</span> 
+            </img>  
+          
+            </div>
+        </section>
+        <section class="memory-game">
+            <div class="memory-card" data-number="1">
+                <img class="front-face" src="img/1.png" alt="1"/>
+                <img class="back-face" src="img/S2Logo.png" alt="S2"/> 
+            </div>
+            <div class="memory-card" data-number="1">
+                <img class="front-face" src="img/1.png" alt="1"/>
+                <img class="back-face" src="img/S2Logo.png" alt="S2"/> 
+            </div>
+            <div class="memory-card" data-number="2">
+                <img class="front-face" src="img/2.png" alt="1"/>
+                <img class="back-face" src="img/S2Logo.png" alt="S2"/> 
+            </div>
+            <div class="memory-card" data-number="2">
+                <img class="front-face" src="img/2.png" alt="1"/>
+                <img class="back-face" src="img/S2Logo.png" alt="S2"/> 
+            </div>
+            <div class="memory-card" data-number="3">
+                <img class="front-face" src="img/3.png" alt="1"/>
+                <img class="back-face" src="img/S2Logo.png" alt="S2"/> 
+            </div>
+            <div class="memory-card" data-number="3">
+                <img class="front-face" src="img/3.png" alt="1"/>
+                <img class="back-face" src="img/S2Logo.png" alt="S2"/> 
+            </div>
+            <div class="memory-card" data-number="4">
+                <img class="front-face" src="img/4.png" alt="1"/>
+                <img class="back-face" src="img/S2Logo.png" alt="S2"/> 
+            </div>
+            <div class="memory-card" data-number="4">
+                <img class="front-face" src="img/4.png" alt="1"/>
+                <img class="back-face" src="img/S2Logo.png" alt="S2"/> 
+            </div>
+            <div class="memory-card" data-number="5">
+                <img class="front-face" src="img/5.png" alt="1"/>
+                <img class="back-face" src="img/S2Logo.png" alt="S2"/> 
+            </div>
+            <div class="memory-card" data-number="5">
+                <img class="front-face" src="img/5.png" alt="1"/>
+                <img class="back-face" src="img/S2Logo.png" alt="S2"/> 
+            </div>
+            <div class="memory-card" data-number="6">
+                <img class="front-face" src="img/6.png" alt="1"/>
+                <img class="back-face" src="img/S2Logo.png" alt="S2"/> 
+            </div>
+            <div class="memory-card" data-number="6">
+                <img class="front-face" src="img/6.png" alt="1"/>
+                <img class="back-face" src="img/S2Logo.png" alt="S2"/> 
+            </div>
+            <div class="memory-card" data-number="7">
+                <img class="front-face" src="img/7.png" alt="1"/>
+                <img class="back-face" src="img/S2Logo.png" alt="S2"/> 
+            </div>
+            <div class="memory-card" data-number="7">
+                <img class="front-face" src="img/7.png" alt="1"/>
+                <img class="back-face" src="img/S2Logo.png" alt="S2"/> 
+            </div>
+            <div class="memory-card" data-number="8">
+                <img class="front-face" src="img/8.png" alt="1"/>
+                <img class="back-face" src="img/S2Logo.png" alt="S2"/> 
+            </div>
+            <div class="memory-card" data-number="8">
+                <img class="front-face" src="img/8.png" alt="1"/>
+                <img class="back-face" src="img/S2Logo.png" alt="S2"/> 
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"> </script>
+</body>
+</html>
