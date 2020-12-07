@@ -8,9 +8,17 @@
 
 body{
     height:100vh;
-    background: #b9e0f1;
+    background: rgb(211,233,255);
+    background: linear-gradient(177deg, rgba(211,233,255,1) 0%, rgba(232,236,240,1) 80%, rgba(232,236,240,1) 100%);
     padding: 2em;  
 }
+
+canvas{
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:-1;
+  }
 
 button{
     color: white;
@@ -44,7 +52,7 @@ button{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #b9e0f1;
+  background: rgb(211,233,255);
   z-index: 2;
   text-align: center;
   justify-content: center;
@@ -64,7 +72,7 @@ button{
     font-weight:600;
     text-transform: uppercase;
 }
-}
+
 
 .score-number-overlay{
     font-size: 1em;
