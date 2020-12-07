@@ -75,10 +75,33 @@ function updateScore(){
 function win(){
 
     //cards.forEach(card => card.classList.add('won'));
+    party.element(document.getElementById("body"));
+
+    setTimeout(() => {
+        party.screen({ 
+            count: 500 * (window.innerWidth / 1980),
+            countVariation: 0.5,
+            angleSpan: 0,
+            yVelocity: -100,
+            yVelocityVariation: 2,
+            rotationVelocityLimit: 6,
+            scaleVariation: 0.8
+          });
+    },500);
+
+    party.screen({ 
+        count: 500 * (window.innerWidth / 1980),
+        countVariation: 0.5,
+        angleSpan: 0,
+        yVelocity: -100,
+        yVelocityVariation: 2,
+        rotationVelocityLimit: 6,
+        scaleVariation: 0.8
+      });
 
     setTimeout(() => {
         openOverlay();
-    },4000);
+    },3000);
 
 }
 
