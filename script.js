@@ -74,8 +74,9 @@ function updateScore(){
 
 function win(){
 
-    openOverlay();
-    
+    setTimeout(() => {
+        openOverlay();
+    },1500);
 
 }
 
@@ -142,7 +143,7 @@ function resetBoard(){
 
 function shuffleCards(){
     cards.forEach(card => {
-        let randomPos = Math.floor(Math.random()* 12);
+        let randomPos = Math.floor(Math.random()* 16);
         card.style.order = randomPos;
 
     });

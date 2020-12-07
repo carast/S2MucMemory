@@ -24,7 +24,6 @@ button{
     font-size: 1em;
     text-transform: uppercase;
     font-weight: 600;
-    margin-top:40px;
 }
 
 .overlay-content{
@@ -55,16 +54,20 @@ button{
 
 .present-overlay{
     height: 10em;
+    width: 10em;
+    margin: 5em;
 }
 
 .won-message{
-    margin-top:16px;
-    font-size: 1em;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    font-weight:600;
+    text-transform: uppercase;
+}
 }
 
 .score-number-overlay{
-    font-size: 3em;
-    font-weight:600;
+    font-size: 1em;
     text-transform: uppercase;
 }
 
